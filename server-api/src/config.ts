@@ -1,0 +1,1 @@
+export const allow_cors = "http://localhost:5173"

@@ -1,0 +1,35 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Product {
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String
+  price       Float
+  imageURL    String
+  sizeOptions SizeOption[]
+  cartItems   CartItem[]
+}
+
+model SizeOption {
+  id        Int     @id @default(autoincrement())
+  label     String
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+}
+
+model CartItem {
+  id        Int     @id @default(autoincrement())
+  customerId Int
+  productId Int
+  size      String
+  quantity  Int     @default(1)
+  product   Product @relation(fields: [productId], references: [id])
+  @@unique([customerId, productId, size])
+}

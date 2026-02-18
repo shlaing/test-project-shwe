@@ -10,3 +10,15 @@ services:
       - /app/node_modules
     environment:
       - CHOKIDAR_USEPOLLING=true
+
+  server-api:
+    build:
+      context: ./server-api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./server-api:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
