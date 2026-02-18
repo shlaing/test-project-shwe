@@ -40,3 +40,4 @@ coverage/
 *.seed
 *.pid.lock
 !*.db
+server-api/prisma/dev.db
