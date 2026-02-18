@@ -1,4 +1,5 @@
 type Product = {
+    total: number;
     id: number;
     title: string;
     description: string;
@@ -8,14 +9,16 @@ type Product = {
         id: number;
         label: string;
     }[];
+    items: CartItem[];
 }
 
 type CartItem = {
+    size: string;
+    product: any;
     customerId: number;
     productId: number;
     sizeId: number;
     quantity: number;
-    toremove_product: Product | null;
 }
 
 type Cart = {

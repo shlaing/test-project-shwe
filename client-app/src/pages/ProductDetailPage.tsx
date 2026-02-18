@@ -32,7 +32,7 @@ export default function ProductDetailPage() {
             setSizeError(true)
         }
         else {
-            addingToCart(addToCart).then(data => {
+            addingToCart(addToCart).then(_data => {
                 getCart(fixedCustomerId).then(data => setCart({ items: data.items, total: data.total })).catch(_error => setError(true)).finally(() => setLoading(false))
             }).catch(_error => setError(true))
 
