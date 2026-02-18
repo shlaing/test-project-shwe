@@ -26,7 +26,7 @@ type Cart = {
 type AddToCart = {
     customerId: number;
     productId: number;
-    sizeId: number;
+    size: string;
     quantity: number;
 }
 
