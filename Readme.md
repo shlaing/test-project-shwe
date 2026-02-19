@@ -16,3 +16,26 @@ docker-compose up -d
 Open http://localhost:3000 for Client
 Open http://localhost:5173 for Server
 ```
+
+## Without Docker
+
+```bash
+# Clone Git repository
+git clone https://github.com/shlaing/test-project-shwe.git
+
+# Docker Compose
+Open terminal
+# client-app
+cd client-app
+npm install
+npm run dev
+
+# server-api
+cd server-api
+npm install
+npm run dev
+
+# Open the app
+Open http://localhost:3000 for Client
+Open http://localhost:5173 for Server
+```
