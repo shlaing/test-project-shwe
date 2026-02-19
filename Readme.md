@@ -24,7 +24,7 @@ Open http://localhost:5173 for Server
 git clone https://github.com/shlaing/test-project-shwe.git
 
 # Docker Compose
-Open terminal
+Open terminal and go to project root directory
 # client-app
 cd client-app
 npm install
